@@ -48,7 +48,7 @@
     "*.{css,scss,sass}": [
       "prettier --write"
     ],
-    "*.{html,json}": [
+    "*.{html,md,json}": [
       "prettier --write"
     ]
   }
