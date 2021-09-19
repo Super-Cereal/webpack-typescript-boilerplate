@@ -7,6 +7,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "jsx": "react",
 
     "target": "ES5",
     "module": "CommonJS",

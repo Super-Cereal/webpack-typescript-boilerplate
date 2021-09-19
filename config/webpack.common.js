@@ -7,12 +7,11 @@ const paths = require('./paths');
 
 module.exports = {
   entry: {
-    main: path.resolve(paths.src, 'index.ts'),
+    main: path.resolve(paths.src, 'index.tsx'),
   },
   output: {
     path: paths.build,
     filename: '[name].bundle.js',
-    publicPath: '/',
   },
 
   module: {
