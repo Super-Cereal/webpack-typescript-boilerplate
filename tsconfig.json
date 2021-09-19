@@ -3,6 +3,10 @@
   "exclude": ["./node_modules"],
   "compilerOptions": {
     "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
 
     "target": "ES5",
     "module": "CommonJS",
@@ -21,6 +25,6 @@
 
     // linter checks, unavailable in ESLint
     "noImplicitReturns": true,
-    "allowUnreachableCode": false,
+    "allowUnreachableCode": false
   }
 }

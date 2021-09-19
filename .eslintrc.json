@@ -14,5 +14,12 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "import/no-named-as-default": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./config/webpack.common.js"
+      }
+    }
   }
 }
