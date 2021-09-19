@@ -1,14 +1,14 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const { merge } = require("webpack-merge");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // eslint-disable-line import/no-extraneous-dependencies
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
+const { merge } = require('webpack-merge'); // eslint-disable-line import/no-extraneous-dependencies
 
-const common = require("./webpack.common.js");
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
 
   output: {
-    filename: "js/[name].[contenthash].bundle.js",
+    filename: 'js/[name].[contenthash].bundle.js',
   },
 
   devtool: false,
@@ -19,23 +19,23 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: { modules: true },
           },
-          "sass-loader",
+          'sass-loader',
         ],
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[contenthash].css",
-      chunkFilename: "[id].css",
+      filename: 'styles/[name].[contenthash].css',
+      chunkFilename: '[id].css',
     }),
   ],
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin(), "..."],
+    minimizer: [new CssMinimizerPlugin(), '...'],
   },
 
   performance: {
