@@ -7,7 +7,7 @@ const paths = require('./paths');
 
 module.exports = {
   entry: {
-    main: path.resolve(paths.src, 'index.tsx'),
+    main: path.resolve(paths.src),
   },
   output: {
     path: paths.build,
