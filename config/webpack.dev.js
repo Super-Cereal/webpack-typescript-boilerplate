@@ -24,7 +24,10 @@ module.exports = merge(common, {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true,
+              modules: {
+                auto: /\.module\.(s[ac]ss|css)$/i,
+                localIdentName: '[path]__[local]--[hash:base64:5]',
+              },
             },
           },
           { loader: 'sass-loader', options: { sourceMap: true } },

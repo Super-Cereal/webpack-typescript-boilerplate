@@ -20,7 +20,13 @@ module.exports = merge(common, {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { modules: true },
+            options: {
+              sourceMap: false,
+              modules: {
+                auto: /\.module\.(s[ac]ss|css)$/i,
+                localIdentName: '[hash:base64]',
+              },
+            },
           },
           'sass-loader',
         ],
