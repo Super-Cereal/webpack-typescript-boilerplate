@@ -31,6 +31,13 @@ module.exports = {
         tsconfigRootDir: __dirname,
       },
       plugins: ['@typescript-eslint'],
+      rules: {
+        'import/no-named-as-default': 0,
+        '@typescript-eslint/no-shadow': 0,
+        'no-param-reassign': 0,
+        semi: ['error', 'always'],
+        'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
+      },
     },
   ],
 

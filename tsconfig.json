@@ -24,6 +24,10 @@
     "noPropertyAccessFromIndexSignature": true,
     "allowJs": true,
 
+    // checked in eslint
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+
     // linter checks, unavailable in ESLint
     "noImplicitReturns": true,
     "allowUnreachableCode": false
